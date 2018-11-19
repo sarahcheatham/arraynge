@@ -2,31 +2,56 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.headerHome {
+  font-family: ivystyle-tw, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 36px;
+  color: #4626AA;
+}
+.login{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.loginForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-style: double;
+  border-color: #0B0323;
 }
 
-.App-link {
-  color: #61dafb;
+.loginLegend{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-family: parisplus-clair, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  color: #0B0323;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.username{
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  font-family: ivystyle-tw, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  color: #0B0323;
 }
+.pwd{
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  font-family: ivystyle-tw, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  color: #0B0323;
+}
+
+

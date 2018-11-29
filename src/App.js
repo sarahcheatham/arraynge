@@ -3,6 +3,8 @@ import './App.css';
 import Header from './components/header';
 import Login from './components/login';
 import Navbar from './components/navbar';
+import LoginControl from './components/loginControl';
+
 
 class App extends Component {
   
@@ -12,6 +14,7 @@ class App extends Component {
         <Header/>
         <Navbar/>
         <Login/>
+        <LoginControl/>
       </div>
     );
   }

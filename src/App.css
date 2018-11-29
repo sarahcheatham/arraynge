@@ -26,8 +26,8 @@
   grid-row-gap: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-style: double;
-  border-color: #343148;
+  border-style: none;
+  /* border-color: #343148; */
 }
 
 .loginLegend{
@@ -63,8 +63,8 @@
 .loginButton{
   color: #f2edd7;
   background-color: rgb(76, 45, 170);
-  width: 100%;
-  height: 100%;
+  width: 125px;
+  height: 40px;
 }
 .overlay{
   position: absolute;

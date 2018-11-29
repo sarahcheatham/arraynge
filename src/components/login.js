@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Button from './button';
+
 
 export default class Login extends Component {
     constructor(props){
@@ -19,7 +19,7 @@ export default class Login extends Component {
     };
 
     handleSubmit = (event)=>{
-        event.preventDefault();
+        console.log(this)
     }
 
     render(){
@@ -46,7 +46,7 @@ export default class Login extends Component {
                             onChange={this.handleChange}
                         />
                     </label>
-                    <span className="box">
+                    {/* <span className="box">
                         <div className="overlay">
                         </div>
                         <button
@@ -56,7 +56,7 @@ export default class Login extends Component {
                         >
                             Login
                         </button>
-                    </span>
+                    </span> */}
                 </form>
             </div>
         );

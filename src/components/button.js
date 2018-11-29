@@ -1,19 +1,30 @@
 import React, {Component} from "react";
 
 export default class Button extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = { 
+            isLoggedIn: false
+        };
+    }
+    
+    handleClick = (event)=>{
+        console.log('here')
+        const isLoggedIn = this.state.isLoggedIn;
+        console.log(isLoggedIn)
+        // this.setState({isLoggedIn: true})
+        
+        
+    }
     render(){
         return(
-            <span className={this.props.className}>
-                <div className="overlay">
-                </div>
-                <button
-                    block
-                    disabled={this.props.disabled}
-                    text={this.props.text}
-                    type="submit"
-                    className="loginButton">
-                </button>
-            </span>
+            <button
+                onClick={this.handleClick}
+                type="submit"
+                className="loginButton"
+            >
+                Login
+            </button>
         )
     }
 }

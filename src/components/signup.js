@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
 
-export default class Login extends Component {
+export default class SignUp extends Component {
     constructor(props){
         super(props);
 
@@ -11,8 +11,18 @@ export default class Login extends Component {
         };
     }
     validateForm(){
-        return this.state.email.length > 0 && this.state.password.length > 0;
+        if(this.state.email.length > 0 && this.state.password.length > 0){
+            if(this.checkEmail()){
+                console.log('true')
+            }else {
+                console.log('false')
+            }
+        }
     };
+
+    checkEmail(){
+        return this.state.email.includes('harmonytx.org');
+    }
 
     handleChange = (event)=>{
         return event.target.id === 'email' ? this.setState({email: event.target.value}) : this.setState({password: event.target.value})
@@ -24,9 +34,9 @@ export default class Login extends Component {
 
     render(){
         return(
-            <div className="login">
-                <form className="loginForm" onSubmit={this.handleSubmit}>
-                    <legend className="loginLegend">Login</legend>
+            <div className="signup">
+                <form className="signupForm" onSubmit={this.handleSubmit}>
+                    <legend className="signupLegend">Sign Up</legend>
                     <label className="email">
                         Email:{" "}
                         <input
@@ -46,15 +56,15 @@ export default class Login extends Component {
                             onChange={this.handleChange}
                         />
                     </label>
-                    <span className="box">
-                        <div className="overlay">
+                    <span className="box2">
+                        <div className="overlay2">
                         </div>
                         <button
                         disabled={!this.validateForm()}
                         type="submit"
-                        className="loginButton"
+                        className="signupButton"
                         >
-                            Login
+                            Register
                         </button>
                     </span>
                 </form>

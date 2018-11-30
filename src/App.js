@@ -4,6 +4,7 @@ import Header from './components/header';
 import Login from './components/login';
 import Navbar from './components/navbar';
 import LoginControl from './components/loginControl';
+import SignUp from './components/signup';
 
 
 class App extends Component {
@@ -14,7 +15,9 @@ class App extends Component {
         <Header/>
         <Navbar/>
         <Login/>
-        <LoginControl/>
+        <SignUp/>
+        {/* <LoginControl/> */}
+
       </div>
     );
   }

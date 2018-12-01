@@ -104,22 +104,27 @@
   background: rgba(0, 0 , 0, .3);
 }
 #email{
-  width: 95%;
+  width: 90%;
   height: 25px;
 }
 #password{
-  width: 95%;
+  width: 90%;
   height: 25px;
 }
-#required{
+
+/* end Login component */
+
+/* start Required component */
+.required{
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   font-size: 10px;
-  text-align: right;
   margin-right: 10px;
 }
-/* end Login component */
+/* end Required component */
 
 /* start Navbar component */
 .menu{

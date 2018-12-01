@@ -1,10 +1,11 @@
 import React, {Component} from "react";
+import Required from './required';
+import Star from './star';
 
 
 export default class Login extends Component {
     constructor(props){
         super(props);
-        const style = this.props.style;
         this.state = {
             email: "",
             password: ""
@@ -23,21 +24,13 @@ export default class Login extends Component {
     }
 
     render(){
-        const required = ['Required', '*']
-        const turnRed = ()=>{
-            const red = {
-                color: 'red'
-            }
-            console.log(required[1])
-            
-        }
         return(
             <div className="login">
                 <form className="loginForm" onSubmit={this.handleSubmit}>
                     <legend className="loginLegend">Sign In</legend>
-                    <p id="required" style={turnRed()}>{required}</p>
+                    <Required/>
                     <label className="email">
-                        Email Address *<br/>
+                        Email Address<Star/><br/>
                         <input
                             autoFocus
                             type="email"
@@ -47,7 +40,7 @@ export default class Login extends Component {
                         />
                     </label>
                     <label className="pwd">
-                        Password * <br/>
+                        Password<Star/> <br/>
                         <input
                             type="password"
                             id="password"

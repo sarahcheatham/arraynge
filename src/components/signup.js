@@ -38,7 +38,7 @@ export default class SignUp extends Component {
                 <form className="signupForm" onSubmit={this.handleSubmit}>
                     <legend className="signupLegend">Sign Up</legend>
                     <label className="email">
-                        Email:{" "}
+                        Email Address *<br/>
                         <input
                             autoFocus
                             type="email"
@@ -48,7 +48,7 @@ export default class SignUp extends Component {
                         />
                     </label>
                     <label className="pwd">
-                        Password:{" "}
+                        Password *<br/>
                         <input
                             type="password"
                             id="password"

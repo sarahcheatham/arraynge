@@ -6,7 +6,7 @@ export default class Header extends React.Component{
         
         return(
             <h1 className="headerHome">
-                [arraynge]
+                [{" "}a{" "}r{" "}r{" "}a{" "}y{" "}n{" "}g{" "}e{" "}]
             </h1>
         ) 
     }

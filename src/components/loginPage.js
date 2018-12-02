@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Login from './login';
+import SignUp from './signup';
 
 export default class LoginPage extends Component{
 
@@ -7,6 +8,7 @@ export default class LoginPage extends Component{
         return(
             <div className="loginPage">
                 <Login/>
+                <SignUp/>
             </div>
         )
     }

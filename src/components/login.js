@@ -24,6 +24,7 @@ export default class Login extends Component {
     }
 
     render(){
+        
         return(
             <div className="login">
                 <form className="loginForm" onSubmit={this.handleSubmit}>
@@ -49,14 +50,14 @@ export default class Login extends Component {
                         />
                     </label>
                     <span className="box">
-                        <div className="overlay">
-                        </div>
+                        <span className="overlay">
+                        </span>
                         <button
                         disabled={!this.validateForm()}
                         type="submit"
                         className="loginButton"
                         >
-                            Login
+                            LOGIN
                         </button>
                     </span>
                 </form>

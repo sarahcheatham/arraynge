@@ -2,73 +2,23 @@ import React, {Component} from "react";
 
 
 export default class SignUp extends Component {
-    constructor(props){
-        super(props);
-
-        this.state = {
-            email: "",
-            password: ""
-        };
-    }
-    validateForm(){
-        if(this.state.email.length > 0 && this.state.password.length > 0){
-            if(this.checkEmail()){
-                console.log('true')
-            }else {
-                console.log('false')
-            }
-        }
-    };
-
-    checkEmail(){
-        return this.state.email.includes('harmonytx.org');
-    }
-
-    handleChange = (event)=>{
-        return event.target.id === 'email' ? this.setState({email: event.target.value}) : this.setState({password: event.target.value})
-    };
-
-    handleSubmit = (event)=>{
-        console.log(this)
-    }
-
     render(){
         return(
             <div className="signup">
-                <form className="signupForm" onSubmit={this.handleSubmit}>
-                    <legend className="signupLegend">Sign Up</legend>
-                    <label className="email">
-                        Email Address *<br/>
-                        <input
-                            autoFocus
-                            type="email"
-                            id="email"
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                        />
-                    </label>
-                    <label className="pwd">
-                        Password *<br/>
-                        <input
-                            type="password"
-                            id="password"
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                        />
-                    </label>
-                    <span className="box2">
-                        <div className="overlay2">
+                <h2 className="signupHeader">CREATE AN ACCOUNT</h2>
+                <p className="signupText">Creating an account is super easy. <br/>Just click below to get started.</p>
+                <span className="signupBox">
+                        <div className="signupOverlay">
                         </div>
                         <button
-                        disabled={!this.validateForm()}
                         type="submit"
                         className="signupButton"
                         >
-                            Register
+                            CREATE ACCOUNT NOW
                         </button>
-                    </span>
-                </form>
+                </span>
+                {/* <button >CREATE ACCOUNT NOW</button> */}
             </div>
-        );
+        )
     }
 }

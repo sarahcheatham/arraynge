@@ -5,15 +5,8 @@ import Navbar from './components/navbar';
 import LoginPage from './components/loginPage';
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      whattoshow: 0
-    };
-  }
 
   render() {
-    let content = null;
     return (
       <div className="App">
         <Header/>

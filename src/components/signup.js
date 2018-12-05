@@ -2,7 +2,20 @@ import React, {Component} from "react";
 
 
 export default class SignUp extends Component {
+    constructor(props){
+        super(props);
+        this.handleSignupClick = this.handleSignupClick.bind(this);
+        this.state={
+            createNewUser: false
+        }
+    }
+    handleSignupClick(){
+        this.setState({createNewUser: true});
+    }
     render(){
+        const createNewUser = this.state.createNewUser;
+        let content = null;
+
         return(
             <div className="signup">
                 <h2 className="signupHeader">CREATE AN ACCOUNT</h2>
@@ -13,11 +26,11 @@ export default class SignUp extends Component {
                         <button
                         type="submit"
                         className="signupButton"
+                        onClick={this.handleSignupClick}
                         >
                             CREATE ACCOUNT NOW
                         </button>
                 </span>
-                {/* <button >CREATE ACCOUNT NOW</button> */}
             </div>
         )
     }

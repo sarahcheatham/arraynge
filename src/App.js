@@ -3,7 +3,8 @@ import './App.css';
 import Header from './components/header';
 import Navbar from './components/navbar';
 import LoginPage from './components/loginPage';
-import SignUpButton from './components/signupButton'
+import SignUpButton from './components/signupButton';
+import NewUserPage from './components/newUserPage';
 
 class App extends Component {
   constructor(){
@@ -22,14 +23,24 @@ class App extends Component {
 
   render() {
     let isClicked = this.state.isClicked;
-    return (
-      <div className="App">
-        <Header/>
-        <Navbar/>
-        <LoginPage/>
-        <SignUpButton className='signupButton' onClick={(e)=>{this.handleSignupClick(e)}}/>
-      </div>
-    );
+    {if (this.state.isClicked == false){
+      return (
+        <div className="App">
+          <Header/>
+          <Navbar/>
+          <LoginPage/>
+          <SignUpButton className='signupButton' onClick={(e)=>{this.handleSignupClick(e)}}/>
+        </div>
+      );
+    }else {
+      return (
+        <div className="App">
+          <Header/>
+          <Navbar/>
+          <NewUserPage/>
+        </div>
+      )
+    }} 
   }
 }
 

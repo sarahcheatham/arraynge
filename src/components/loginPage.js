@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import Login from './login';
+import Login from './login 2';
 import SignUp from './signup';
-// import LoginButton from './loginButton';
-// import SignUpButton from './signupButton';
-// import { Link } from 'react-router-dom';
+import LoginButton from './loginButton';
+import SignUpButton from './signupButton';
+
 
 
 export default class LoginPage extends Component{
@@ -34,13 +34,13 @@ export default class LoginPage extends Component{
             <div className="loginPage">
                 <Login/>
                 <SignUp/>
-                {/* <div className='buttonBox'>
+                <div className='buttonBox'>
                     <LoginButton onClick={(e)=>{this.handleLoginClick(e)}} className="loginButton"/>
-                    <SignUpButton className='signupButton' onClick={(e)=>{this.handleSignupClick(e)}}>
-                        <Link to={'/signup'}/>
-                    </SignUpButton>
+                    <SignUpButton className='signupButton' onClick={(e)=>{this.handleSignupClick(e)}}/>
+                  
+                    
                         
-                </div> */}
+                </div>
             </div>
         )
     }

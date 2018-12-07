@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/header';
 import Navbar from './components/navbar';
 import LoginPage from './components/loginPage';
 import NewUserPage from './components/newUserPage';
-import SignUpButton from './components/signupButton';
-import LoginButton from './components/loginButton';
+
 
 class App extends Component {
   constructor(){
@@ -26,45 +25,46 @@ class App extends Component {
  
 
   render() {
-    let isClicked = this.state.isClicked;
-    // {if (isClicked === false){
-      {if (isClicked === false){
-        return (
+  //   let isClicked = this.state.isClicked;
+  //   // {if (isClicked === false){
+  //     {if (isClicked === false){
+  //       return (
+  //         <div className="App">
+  //           <Header/>
+  //           <Navbar/>
+  //           <LoginPage/>
+  //           <div className='buttonBox'>
+  //             <SignUpButton className='signupButton' onClick={(e)=>{this.handleSignupClick(e)}}/>
+  //             <LoginButton onClick={(e)=>{this.handleLoginClick(e)}} className="loginButton"/>
+  //           </div>
+  //         </div>
+  //       );
+  //     }else {
+  //        return (
+  //          <div className="App">
+  //            <Header/>
+  //            <Navbar/>
+  //            <NewUserPage/>
+  //          </div>
+  //        )
+  //      }} 
+  //    }
+  //  }
+   
+  
+      return (
+        <BrowserRouter>
           <div className="App">
             <Header/>
             <Navbar/>
-            <LoginPage/>
-            <div className='buttonBox'>
-              <SignUpButton className='signupButton' onClick={(e)=>{this.handleSignupClick(e)}}/>
-              <LoginButton onClick={(e)=>{this.handleLoginClick(e)}} className="loginButton"/>
-            </div>
+            <Switch>
+              <Route path="/signup" component={NewUserPage}/>
+              <Route path='/' component={LoginPage}/>
+            </Switch>
           </div>
-        );
-      }else {
-         return (
-           <div className="App">
-             <Header/>
-             <Navbar/>
-             <NewUserPage/>
-           </div>
-         )
-       }} 
-     }
-   }
-   
-  
-      // return (
-      //   <BrowserRouter>
-      //     <div className="App">
-      //       <Header/>
-      //       <Navbar/>
-      //       <Switch>
-      //         <Route path='/' component={LoginPage}/>
-      //         <Route path="/signup" component={NewUserPage}/>
-      //       </Switch>
-      //     </div>
-      //   </BrowserRouter>
-      // ); 
-
+        </BrowserRouter>
+      ); 
+    }
+  }
 
 export default App;

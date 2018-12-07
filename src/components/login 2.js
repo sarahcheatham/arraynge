@@ -2,26 +2,27 @@ import React, {Component} from "react";
 import Required from './required';
 import Star from './star';
 
-
 export default class Login extends Component {
     constructor(props){
         super(props);
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            isLoggedIn: false
         };
     }
+
     validateForm(){
-        return this.state.email.length > 0 && this.state.password.length > 0;
+        let isLoggedIn = this.state.isLoggedIn;
+        if(isLoggedIn === true){
+            console.log(true)
+            return this.state.email.length > 0 && this.state.password.length > 0;
+        } console.log(false)
     };
 
     handleChange = (event)=>{
         return event.target.id === 'email' ? this.setState({email: event.target.value}) : this.setState({password: event.target.value})
     };
-
-    handleSubmit = (event)=>{
-        console.log(this)
-    }
 
     render(){
         
@@ -49,17 +50,18 @@ export default class Login extends Component {
                             onChange={this.handleChange}
                         />
                     </label>
-                    <span className="box">
+                    {/* <span className="box">
                         <span className="overlay">
                         </span>
-                        <button
+                        <LoginButton onClick={(e)=>{this.handleLoginClick(e)}} onSubmit={this.validateForm} className="loginButton"/>
+                        {/* <button
                         disabled={!this.validateForm()}
                         type="submit"
                         className="loginButton"
                         >
                             LOGIN
-                        </button>
-                    </span>
+                        </button> */}
+                    {/* </span> */}
                 </form>
             </div>
         );

@@ -239,3 +239,86 @@
 }
 
 /* end Navbar component */
+
+/* start newUserPage component */
+.newUserPage{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+}
+
+.newUserHeader{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.newUserForm{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.newUserRequired{
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  text-align: justify;
+}
+.firstName{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: justify;
+}
+#firstName{
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  height: 25px;
+  width: 100%;
+}
+.lastName{
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  text-align: justify;
+}
+#lastName{
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  height: 25px;
+  width: 100%;
+}
+.newUserEmail{
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+  text-align: justify;
+}
+
+#newUserEmail{
+  grid-column: 2 / 3;
+  grid-row: 7 / 8;
+  height: 25px;
+  width: 100%;
+}
+
+.newUserPassword{
+  grid-column: 2 / 3; 
+  grid-row: 8 / 9;
+  text-align: justify;
+}
+
+#newUserPassword{
+  grid-column: 2 / 3; 
+  grid-row: 9 / 10;
+  height: 25px;
+  width: 100%;
+}
+.newUserButton{
+  grid-column: 2 / 3;
+  grid-row: 10 / 11;
+  color: #f2edd7;
+  background-color: #343148;
+  height: 40px;
+  width: 100%;
+}
+/* end newUserPage component */

@@ -6,7 +6,7 @@ export default class Required extends Component{
         
         
         return(
-            <div className='required'>
+            <div className={this.props.className}>
                 Required
                 <Star />
             </div>

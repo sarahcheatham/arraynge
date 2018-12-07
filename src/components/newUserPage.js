@@ -14,15 +14,29 @@ export default class NewUserPage extends Component{
     }
 
     handleChange = (event)=>{
-        console.log(event)
+        let targetType = event.target.id;
+        let targetValue = event.target.value;
+        console.log(targetType, targetValue)
+        if(targetType === 'firstName'){
+            this.setState({firstName: targetValue})
+        }
+        if(targetType === 'lastName'){
+            this.setState({lastName: targetValue})
+        }
+        if(targetType === 'newUserEmail'){
+            this.setState({email: targetValue})
+        }
+        if(targetType === 'newUserPassword'){
+            this.setState({password: targetValue})
+        }
         // return event.target.id === 'email' ? this.setState({email: event.target.value}) : this.setState({password: event.target.value})
       };
     render(){
         return(
             <div className='newUserPage'>
-                <h1>CREATE ACCOUNT</h1>
+                <h1 className='newUserHeader'>CREATE ACCOUNT</h1>
                 <form className="newUserForm">
-                    <Required/>
+                    <Required className="newUserRequired"/>
                     <label className="firstName">
                         First Name<Star/><br/>
                         <input
@@ -33,6 +47,37 @@ export default class NewUserPage extends Component{
                             onChange={this.handleChange}
                         />
                     </label>
+                    <label className="lastName">
+                        Last Name<Star/><br/>
+                        <input
+                            autoFocus
+                            type="text"
+                            id="lastName"
+                            value={this.state.lastName}
+                            onChange={this.handleChange}
+                        />
+                    </label>
+                    <label className="newUserEmail">
+                        Email<Star/><br/>
+                        <input
+                            autoFocus
+                            type="text"
+                            id="newUserEmail"
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                        />
+                    </label>
+                    <label className="newUserPassword">
+                        Password<Star/><br/>
+                        <input
+                            autoFocus
+                            type="text"
+                            id="newUserPassword"
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                        />
+                    </label>
+                    <button className="newUserButton">CREATE AN ACCOUNT</button>
                 </form>
             </div>
         )

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Required from './required';
 import Star from './star';
+import NewUserButton from './newUserButton';
 
 export default class NewUserPage extends Component{
     constructor(props){
@@ -29,8 +30,9 @@ export default class NewUserPage extends Component{
         if(targetType === 'newUserPassword'){
             this.setState({password: targetValue})
         }
-        // return event.target.id === 'email' ? this.setState({email: event.target.value}) : this.setState({password: event.target.value})
-      };
+    };
+
+
     render(){
         return(
             <div className='newUserPage'>
@@ -77,7 +79,7 @@ export default class NewUserPage extends Component{
                             onChange={this.handleChange}
                         />
                     </label>
-                    <button className="newUserButton">CREATE AN ACCOUNT</button>
+                    <NewUserButton className="newUserButton"/>
                 </form>
             </div>
         )

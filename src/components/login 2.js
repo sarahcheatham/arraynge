@@ -30,7 +30,7 @@ export default class Login extends Component {
             <div className="login">
                 <form className="loginForm" onSubmit={this.handleSubmit}>
                     <legend className="loginLegend">Sign In</legend>
-                    <Required/>
+                    <Required className='required'/>
                     <label className="email">
                         Email Address<Star/><br/>
                         <input

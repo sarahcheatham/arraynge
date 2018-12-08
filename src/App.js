@@ -5,6 +5,7 @@ import Header from './components/header';
 import Navbar from './components/navbar';
 import LoginPage from './components/loginPage';
 import NewUserPage from './components/newUserPage';
+import GradeLevel from './components/arrayngeType';
 
 
 class App extends Component {
@@ -25,33 +26,6 @@ class App extends Component {
  
 
   render() {
-  //   let isClicked = this.state.isClicked;
-  //   // {if (isClicked === false){
-  //     {if (isClicked === false){
-  //       return (
-  //         <div className="App">
-  //           <Header/>
-  //           <Navbar/>
-  //           <LoginPage/>
-  //           <div className='buttonBox'>
-  //             <SignUpButton className='signupButton' onClick={(e)=>{this.handleSignupClick(e)}}/>
-  //             <LoginButton onClick={(e)=>{this.handleLoginClick(e)}} className="loginButton"/>
-  //           </div>
-  //         </div>
-  //       );
-  //     }else {
-  //        return (
-  //          <div className="App">
-  //            <Header/>
-  //            <Navbar/>
-  //            <NewUserPage/>
-  //          </div>
-  //        )
-  //      }} 
-  //    }
-  //  }
-   
-  
       return (
         <BrowserRouter>
           <div className="App">
@@ -59,6 +33,7 @@ class App extends Component {
             <Navbar/>
             <Switch>
               <Route path="/signup" component={NewUserPage}/>
+              <Route path="/gradelevel" component={GradeLevel}/>
               <Route path='/' component={LoginPage}/>
             </Switch>
           </div>

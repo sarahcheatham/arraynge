@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/header';
+// import SideNav from './components/sideNav';
 import Navbar from './components/navbar';
 import LoginPage from './components/loginPage';
 import NewUserPage from './components/newUserPage';
 import GradeLevel from './components/arrayngeType';
+
 
 
 class App extends Component {
@@ -30,6 +32,7 @@ class App extends Component {
         <BrowserRouter>
           <div className="App">
             <Header/>
+            {/* <SideNav/> */}
             <Navbar/>
             <Switch>
               <Route path="/signup" component={NewUserPage}/>

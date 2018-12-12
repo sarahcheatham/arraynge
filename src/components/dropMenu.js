@@ -28,9 +28,9 @@ export default class DropMenu extends Component{
 
     render(){
         return(
-            <div className='dropMenuContainer'>
+            <div className={this.props.className}>
                 <button onClick={this.showMenu} className='mainDropMenuButton'>
-                    Show Grades
+                    SHOW GRADE LEVELS
                 </button>
 
                 {

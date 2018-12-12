@@ -6,7 +6,7 @@ import Header from './components/header';
 import Navbar from './components/navbar';
 import LoginPage from './components/loginPage';
 import NewUserPage from './components/newUserPage';
-import GradeLevel from './components/arrayngeType';
+import ClassDataPage from './components/ClassDataPage';
 
 
 
@@ -32,11 +32,10 @@ class App extends Component {
         <BrowserRouter>
           <div className="App">
             <Header/>
-            {/* <SideNav/> */}
             <Navbar/>
             <Switch>
               <Route path="/signup" component={NewUserPage}/>
-              <Route path="/gradelevel" component={GradeLevel}/>
+              <Route path="/classdata" component={ClassDataPage}/>
               <Route path='/' component={LoginPage}/>
             </Switch>
           </div>

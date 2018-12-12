@@ -8,7 +8,7 @@ export default function NewUserButton(props){
     }
     return(
         <button className={props.className} onClick={props.onClick}>
-            <Link to={'/gradelevel'} style={styles}>
+            <Link to={'/classdata'} style={styles}>
                 CREATE AN ACCOUNT
             </Link>
         </button>   

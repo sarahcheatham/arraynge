@@ -1,9 +1,18 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  grid-template-rows: 100px 1fr;
   /* background-color: #f2e3ea; */
 }
+.page{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
 /* start Header component */
-.headerHome {
+.header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
   font-family: ivystyle-tw, sans-serif;
   font-style: normal;
   font-weight: 200;
@@ -12,6 +21,16 @@
   /* background-color: #EFEEE8; */
 }
 /* end Header component */
+
+/* start SubHeader Component */
+.subheader{
+  padding-top: 15px;
+  font-family: nobel, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 28px;
+}
+/* end SubHeader Component */
 
 /* start LoginPage component */
 .loginPage{
@@ -189,6 +208,10 @@
   overflow: hidden;
   background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  max-height: 100%;
+  background-color: #F7CAC9;
 }
 .navbar a {
   float: left;
@@ -198,6 +221,7 @@
   padding: 14px 16px;
   text-decoration: none;
 }
+
 .dropdown {
   float: left;
   overflow: hidden;
@@ -417,7 +441,7 @@
   grid-template-rows: 50px 1fr 1fr 1fr 1fr;
   margin-left: 25px;
   margin-right: 0px;
-  padding-top: 25px;
+  padding-top: 15px;
   border-left: 5px solid #277273;
   border-top: none;
   border-right: 2.5px solid #277273;

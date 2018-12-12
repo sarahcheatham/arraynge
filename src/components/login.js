@@ -28,7 +28,7 @@ export default class Login extends Component {
         return(
             <div className="login">
                 <form className="loginForm" onSubmit={this.handleSubmit}>
-                    <legend className="loginLegend">Sign In</legend>
+                    <legend className="loginLegend">SIGN IN</legend>
                     <Required/>
                     <label className="email">
                         Email Address<Star/><br/>

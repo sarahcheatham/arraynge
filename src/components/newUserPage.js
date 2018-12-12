@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Required from './required';
 import Star from './star';
 import NewUserButton from './newUserButton';
+import SubHeader from './SubHeader';
 
 export default class NewUserPage extends Component{
     constructor(props){
@@ -36,7 +37,8 @@ export default class NewUserPage extends Component{
     render(){
         return(
             <div className='newUserPage'>
-                <h1 className='newUserHeader'>CREATE ACCOUNT</h1>
+                {/* <h1 className='newUserHeader'>CREATE ACCOUNT</h1> */}
+                <SubHeader text="CREATE ACCOUNT"/>
                 <form className="newUserForm">
                     <Required className="newUserRequired"/>
                     <label className="firstName">

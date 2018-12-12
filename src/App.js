@@ -7,6 +7,7 @@ import Navbar from './components/navbar';
 import LoginPage from './components/loginPage';
 import NewUserPage from './components/newUserPage';
 import ClassDataPage from './components/ClassDataPage';
+// import Footer from './components/Footer';
 
 
 
@@ -33,11 +34,14 @@ class App extends Component {
           <div className="App">
             <Header/>
             <Navbar/>
-            <Switch>
-              <Route path="/signup" component={NewUserPage}/>
-              <Route path="/classdata" component={ClassDataPage}/>
-              <Route path='/' component={LoginPage}/>
-            </Switch>
+            <div className="page">
+              <Switch>
+                <Route path="/signup" component={NewUserPage}/>
+                <Route path="/classdata" component={ClassDataPage}/>
+                <Route path='/' component={LoginPage}/>
+              </Switch>
+            </div>
+            {/* <Footer/> */}
           </div>
         </BrowserRouter>
       ); 

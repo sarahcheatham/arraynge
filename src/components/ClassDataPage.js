@@ -1,8 +1,25 @@
 import React, {Component} from "react";
 import DropMenu from './dropMenu';
 import SubHeader from './SubHeader';
+import ClassDataButton from './ClassDataButton';
 
-export default class ArrayngeType extends Component{
+export default class ClassDataPage extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            gradeLevel: "",
+            subject: ""
+        }
+    }
+
+    handleSubjectClick(e){
+        console.log(e.target.text)
+
+    }
+
+    handleGradeLevelClick(){
+
+    }
     render(){
         return(
             <div className="classDataPage">
@@ -18,8 +35,8 @@ export default class ArrayngeType extends Component{
                     <p className="classDataSubHeader">SUBJECT</p>
                     <p className="classDataText">Choose the subject that you would like to arraynge</p>
                     <div className="subjectButtons">
-                        <button className="mathButton">MATH</button>
-                        <button className="readingButton">READING</button>
+                        <ClassDataButton className="mathButton" text="MATH" onClick={(e)=>{this.handleSubjectClick(e)}}/>
+                        <ClassDataButton className="readingButton" text="READING"/>
                     </div>
                 </span>
             </div>

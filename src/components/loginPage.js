@@ -4,8 +4,6 @@ import SignUp from './signup';
 import LoginButton from './loginButton';
 import SignUpButton from './signupButton';
 
-
-
 export default class LoginPage extends Component{
     constructor(props){
         super(props);
@@ -36,10 +34,7 @@ export default class LoginPage extends Component{
                 <SignUp/>
                 <div className='buttonBox'>
                     <LoginButton onClick={(e)=>{this.handleLoginClick(e)}} className="loginButton"/>
-                    <SignUpButton className='signupButton' onClick={(e)=>{this.handleSignupClick(e)}}/>
-                  
-                    
-                        
+                    <SignUpButton className='signupButton' onClick={(e)=>{this.handleSignupClick(e)}}/>   
                 </div>
             </div>
         )
